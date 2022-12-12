@@ -1,0 +1,22 @@
+<header class="header-content">
+  <div class="left-part">
+    <div class="header-logo">
+      <img src="/assets/logo.svg" class="logo-icon" />
+      <div class="logo-text">Tamil</div>
+    </div>
+    <div class="navigation-button">
+      <!-- <div>Home</div>
+      <div>Features</div>
+      <div>About us</div> -->
+    </div>
+  </div>
+  <div class="right-part">
+    <button *ngIf="router.url == '/login'" [routerLink]="['/register']" mat-raised-button color="primary">
+      Sign up
+    </button>
+    <button *ngIf="router.url == '/register'" [routerLink]="['/login']" mat-raised-button color="primary">
+      Sign in
+    </button>
+    <button *ngIf="router.url == '/comments'" (click)="signOut()" mat-raised-button color="primary">Sign out</button>
+  </div>
+</header>
